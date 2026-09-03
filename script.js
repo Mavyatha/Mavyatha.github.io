@@ -2,9 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollBtn = document.getElementById('scrollTop');
     const navLinks = document.querySelectorAll('.nav-links a');
     const sections = document.querySelectorAll('main section[id]');
-    const animatedElements = document.querySelectorAll(
-        '.stat-item, .edu-card, .skill-category, .experience-card, .project-card, .achievement-card, .contact-item'
-    );
+   const animatedElements = document.querySelectorAll(
+    '.stat-item, .edu-card, .skill-category, .experience-card, .project-card, .achievement-card, .highlight-card, .contact-item'
+);
 
     // Scroll-to-top button
     const updateScrollButton = () => {
