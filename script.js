@@ -1,84 +1,89 @@
-// Scroll to top functionality
-const scrollBtn = document.getElementById('scrollTop');
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 500) {
-        scrollBtn.classList.add('show');
-    } else {
-        scrollBtn.classList.remove('show');
-    }
-});
-
-scrollBtn.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
-
-// Smooth scrolling for navigation links
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        
-        if (targetElement) {
-            targetElement.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
-// Add animation on scroll
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
-
-// Observe cards for animation
-document.querySelectorAll('.stat-card, .edu-card, .project-card, .achievement-card, .contact-card').forEach(card => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(20px)';
-    card.style.transition = 'opacity 0.6s, transform 0.6s';
-    observer.observe(card);
-});
-
-// Optional: Add active state to navigation links based on scroll position
-window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('section');
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollBtn = document.getElementById('scrollTop');
     const navLinks = document.querySelectorAll('.nav-links a');
-    
-    let current = '';
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        
-        if (window.scrollY >= sectionTop - 200) {
-            current = section.getAttribute('id');
-        }
-    });
-    
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.style.opacity = '1';
-            link.style.fontWeight = '600';
+    const sections = document.querySelectorAll('main section[id]');
+    const animatedElements = document.querySelectorAll(
+        '.stat-item, .edu-card, .skill-category, .experience-card, .project-card, .achievement-card, .contact-item'
+    );
+
+    // Scroll-to-top button
+    const updateScrollButton = () => {
+        if (window.scrollY > 450) {
+            scrollBtn.classList.add('show');
         } else {
-            link.style.opacity = '0.7';
-            link.style.fontWeight = '400';
+            scrollBtn.classList.remove('show');
         }
+    };
+
+    window.addEventListener('scroll', updateScrollButton, { passive: true });
+    updateScrollButton();
+
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
+
+    // Smooth navigation
+    navLinks.forEach(link => {
+        link.addEventListener('click', event => {
+            const targetId = link.getAttribute('href');
+
+            if (!targetId || !targetId.startsWith('#')) {
+                return;
+            }
+
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                event.preventDefault();
+
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Reveal elements when they enter the viewport
+    const observerOptions = {
+        threshold: 0.12,
+        rootMargin: '0px 0px -45px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries, observerInstance) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observerInstance.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    animatedElements.forEach(element => {
+        element.classList.add('reveal');
+        observer.observe(element);
+    });
+
+    // Active navigation item
+    const updateActiveNav = () => {
+        const scrollPosition = window.scrollY + 220;
+        let currentSection = 'about';
+
+        sections.forEach(section => {
+            if (scrollPosition >= section.offsetTop) {
+                currentSection = section.id;
+            }
+        });
+
+        navLinks.forEach(link => {
+            const isActive = link.getAttribute('href') === `#${currentSection}`;
+            link.classList.toggle('active', isActive);
+        });
+    };
+
+    window.addEventListener('scroll', updateActiveNav, { passive: true });
+    updateActiveNav();
 });
