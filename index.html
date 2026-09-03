@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="Mavyatha Paireddy - Computer Science student and aspiring software engineer portfolio.">
     <title>Mavyatha Paireddy | Software Engineer Portfolio</title>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- External CSS -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
-    <!-- ==================== NAVBAR ==================== -->
-
     <div class="container">
 
-        <nav class="navbar">
-
-            <div class="logo">MP</div>
+        <!-- Navigation -->
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="#about" class="logo" aria-label="Mavyatha Paireddy home">MP</a>
 
             <div class="nav-links">
                 <a href="#about">About</a>
@@ -31,47 +29,43 @@
                 <a href="#skills">Skills</a>
                 <a href="#experience">Experience</a>
                 <a href="#projects">Projects</a>
-                <a href="#achievements">Certifications</a>
+                <a href="#certifications">Certifications</a>
                 <a href="#contact">Contact</a>
             </div>
-
         </nav>
 
+        <main class="main-card">
 
-        <!-- ==================== MAIN CARD ==================== -->
-
-        <div class="main-card">
-
-
-            <!-- ==================== HERO / ABOUT ==================== -->
-
+            <!-- Hero -->
             <section class="hero" id="about">
-
                 <div class="hero-content">
-
                     <span class="greeting">👋 Hello, I'm</span>
 
                     <h1>
-                        <span class="highlight">Mavyatha Paireddy</span>
+                        Mavyatha <span class="highlight">Paireddy</span>
                     </h1>
 
                     <div class="hero-subtitle">
-                        Computer Science Student @ GITAM University
+                        Computer Science Student · GITAM University
                     </div>
 
                     <p class="hero-description">
-                        Aspiring Software Engineer with hands-on experience in
-                        full-stack development and object-oriented software design.
-                        Skilled in Java, Python, JavaScript, REST APIs, and database
-                        technologies, with a strong foundation in Data Structures,
-                        Algorithms, and software development.
+                        I’m an aspiring software engineer who enjoys turning ideas
+                        into practical, user-focused applications. I’m particularly
+                        interested in full-stack development, backend systems,
+                        problem solving, and building clean, reliable software.
                     </p>
 
-
-                    <!-- HERO STATS -->
+                    <div class="hero-actions">
+                        <a href="#projects" class="primary-btn">
+                            <i class="fas fa-code"></i> View My Work
+                        </a>
+                        <a href="#contact" class="secondary-btn">
+                            <i class="fas fa-paper-plane"></i> Get In Touch
+                        </a>
+                    </div>
 
                     <div class="hero-stats">
-
                         <div class="stat-item">
                             <div class="stat-number">8.55</div>
                             <div class="stat-label">CGPA</div>
@@ -83,760 +77,391 @@
                         </div>
 
                         <div class="stat-item">
-                            <div class="stat-number">4+</div>
-                            <div class="stat-label">Skill Areas</div>
+                            <div class="stat-number">2027</div>
+                            <div class="stat-label">Graduation</div>
                         </div>
-
                     </div>
-
                 </div>
-
-
-                <!-- PROFILE IMAGE -->
 
                 <div class="hero-image">
-
                     <div class="profile-image-container large">
-
                         <img src="mavya.jpeg"
-                            alt="Mavyatha Paireddy"
-                            class="profile-image">
-
+                             alt="Portrait of Mavyatha Paireddy"
+                             class="profile-image">
                         <div class="image-border"></div>
-
                     </div>
-
                 </div>
-
             </section>
 
-
-
-            <!-- ==================== EDUCATION ==================== -->
-
+            <!-- Education -->
             <section id="education">
-
                 <div class="section-header">
-
                     <h2>Education</h2>
-
                     <div class="section-line"></div>
-
                 </div>
-
 
                 <div class="education-grid">
-
-
-                    <!-- GITAM -->
-
-                    <div class="edu-card">
-
+                    <article class="edu-card">
+                        <span class="card-label">2023 — 2027</span>
                         <h3>GITAM University</h3>
-
                         <div class="edu-meta">
-                            Bachelor of Technology in Computer Science Engineering
+                            Bachelor of Technology · Computer Science Engineering
                         </div>
-
-                        <div class="edu-date">
-
-                            <i class="far fa-calendar"></i>
-
-                            August 2023 - May 2027
-
-                        </div>
-
-                        <p style="color: #718096; margin-top: 1rem;">
-                            CGPA: 8.55
+                        <p class="edu-description">
+                            Building a strong foundation in software development,
+                            computer science fundamentals, and modern web technologies.
                         </p>
+                        <div class="edu-highlight">
+                            <strong>8.55</strong>
+                            <span>Current CGPA</span>
+                        </div>
+                    </article>
 
-                    </div>
-
-
-                    <!-- NARAYANA -->
-
-                    <div class="edu-card">
-
+                    <article class="edu-card">
+                        <span class="card-label">2021 — 2023</span>
                         <h3>Narayana Junior College</h3>
-
                         <div class="edu-meta">
-                            Board of Intermediate Education (Class XII)
+                            Board of Intermediate Education · Class XII
                         </div>
-
-                        <div class="edu-date">
-
-                            <i class="far fa-calendar"></i>
-
-                            July 2021 - March 2023
-
-                        </div>
-
-                        <p style="color: #718096; margin-top: 1rem;">
-                            Percentage: 93.3%
+                        <p class="edu-description">
+                            Completed higher secondary education with a strong
+                            academic foundation in science and mathematics.
                         </p>
-
-                    </div>
-
+                        <div class="edu-highlight">
+                            <strong>93.3%</strong>
+                            <span>Overall Percentage</span>
+                        </div>
+                    </article>
                 </div>
-
             </section>
 
-
-
-            <!-- ==================== TECHNICAL SKILLS ==================== -->
-
+            <!-- Skills -->
             <section id="skills">
-
                 <div class="section-header">
-
                     <h2>Technical Skills</h2>
-
                     <div class="section-line"></div>
-
                 </div>
-
 
                 <div class="skills-container">
 
-
-                    <!-- LANGUAGES -->
-
                     <div class="skill-category">
-
-                        <h3>Languages</h3>
-
+                        <h3><i class="fas fa-laptop-code"></i> Programming</h3>
                         <div class="skill-tags">
-
-                            <span class="skill-tag">
-                                <i class="fab fa-python"></i>
-                                Python
-                            </span>
-
-                            <span class="skill-tag">
-                                <i class="fab fa-java"></i>
-                                Java
-                            </span>
-
-                            <span class="skill-tag">
-                                <i class="fab fa-js"></i>
-                                JavaScript
-                            </span>
-
-                            <span class="skill-tag">
-                                <i class="fas fa-database"></i>
-                                SQL
-                            </span>
-
-                            <span class="skill-tag">
-                                <i class="fas fa-code"></i>
-                                C
-                            </span>
-
+                            <span class="skill-tag"><i class="fab fa-java"></i> Java</span>
+                            <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                            <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
+                            <span class="skill-tag"><i class="fas fa-database"></i> SQL</span>
+                            <span class="skill-tag"><i class="fas fa-code"></i> C</span>
                         </div>
-
                     </div>
 
-
-
-                    <!-- WEB TECHNOLOGIES -->
-
                     <div class="skill-category">
-
-                        <h3>Web Technologies</h3>
-
+                        <h3><i class="fas fa-globe"></i> Web Development</h3>
                         <div class="skill-tags">
-
-                            <span class="skill-tag">
-                                <i class="fab fa-node-js"></i>
-                                Node.js
-                            </span>
-
-                            <span class="skill-tag">
-                                <i class="fab fa-react"></i>
-                                React
-                            </span>
-
-                            <span class="skill-tag">
-                                <i class="fas fa-server"></i>
-                                Express.js
-                            </span>
-
-                            <span class="skill-tag">
-                                <i class="fas fa-database"></i>
-                                MongoDB
-                            </span>
-
-                            <span class="skill-tag">
-                                <i class="fas fa-database"></i>
-                                MySQL
-                            </span>
-
-                            <span class="skill-tag">
-                                <i class="fas fa-cloud"></i>
-                                RESTful APIs
-                            </span>
-
-                            <span class="skill-tag">
-                                <i class="fas fa-lock"></i>
-                                JWT Authentication
-                            </span>
-
+                            <span class="skill-tag"><i class="fab fa-react"></i> React</span>
+                            <span class="skill-tag"><i class="fab fa-node-js"></i> Node.js</span>
+                            <span class="skill-tag"><i class="fas fa-server"></i> Express.js</span>
+                            <span class="skill-tag"><i class="fas fa-database"></i> MongoDB</span>
+                            <span class="skill-tag"><i class="fas fa-database"></i> MySQL</span>
+                            <span class="skill-tag"><i class="fas fa-plug"></i> REST APIs</span>
+                            <span class="skill-tag"><i class="fas fa-shield-halved"></i> JWT</span>
                         </div>
-
                     </div>
 
-
-
-                    <!-- CORE CONCEPTS -->
-
                     <div class="skill-category">
-
-                        <h3>Core Concepts</h3>
-
+                        <h3><i class="fas fa-brain"></i> Core Concepts</h3>
                         <div class="skill-tags">
-
-                            <span class="skill-tag">
-                                DSA
-                            </span>
-
-                            <span class="skill-tag">
-                                OOP
-                            </span>
-
-                            <span class="skill-tag">
-                                Operating Systems
-                            </span>
-
-                            <span class="skill-tag">
-                                DBMS
-                            </span>
-
-                            <span class="skill-tag">
-                                Computer Networks
-                            </span>
-
-                            <span class="skill-tag">
-                                SDLC
-                            </span>
-
-                            <span class="skill-tag">
-                                Debugging
-                            </span>
-
+                            <span class="skill-tag">DSA</span>
+                            <span class="skill-tag">OOP</span>
+                            <span class="skill-tag">DBMS</span>
+                            <span class="skill-tag">Operating Systems</span>
+                            <span class="skill-tag">Computer Networks</span>
+                            <span class="skill-tag">SDLC</span>
+                            <span class="skill-tag">Debugging</span>
                         </div>
-
                     </div>
 
-
-
-                    <!-- TOOLS & CLOUD -->
-
                     <div class="skill-category">
-
-                        <h3>Tools & Cloud</h3>
-
+                        <h3><i class="fas fa-toolbox"></i> Tools & Platforms</h3>
                         <div class="skill-tags">
-
-                            <span class="skill-tag">
-                                <i class="fab fa-github"></i>
-                                Git/GitHub
-                            </span>
-
-                            <span class="skill-tag">
-                                <i class="fab fa-linux"></i>
-                                Unix/Linux
-                            </span>
-
-                            <span class="skill-tag">
-                                <i class="fab fa-aws"></i>
-                                AWS
-                            </span>
-
+                            <span class="skill-tag"><i class="fab fa-github"></i> Git / GitHub</span>
+                            <span class="skill-tag"><i class="fab fa-linux"></i> Unix / Linux</span>
+                            <span class="skill-tag"><i class="fab fa-aws"></i> AWS</span>
                         </div>
-
                     </div>
-
                 </div>
-
             </section>
 
-
-
-            <!-- ==================== EXPERIENCE ==================== -->
-
+            <!-- Experience -->
             <section id="experience">
-
                 <div class="section-header">
-
                     <h2>Experience</h2>
-
                     <div class="section-line"></div>
-
                 </div>
 
-
-                <div class="experience-grid">
-
-                    <div class="experience-card">
-
-                        <div class="experience-header">
-
-                            <div>
-
-                                <h3>
-                                    Summer Intern
-                                </h3>
-
-                                <div class="experience-company">
-                                    Vicharanashala Lab for Education Design
-                                    (VLED), IIT Ropar
-                                </div>
-
-                            </div>
-
-                            <div class="experience-date">
-
-                                <i class="far fa-calendar"></i>
-
-                                May 2026 - Aug 2026
-
-                            </div>
-
+                <article class="experience-card">
+                    <div class="experience-top">
+                        <div>
+                            <span class="card-label">Summer Internship · May 2026 — Aug 2026</span>
+                            <h3>Vicharanashala Lab for Education Design (VLED)</h3>
+                            <p class="experience-company">IIT Ropar</p>
                         </div>
-
-
-                        <ul class="experience-features">
-
-                            <li>
-                                <i class="fas fa-check-circle"></i>
-                                Contributed to educational technology projects
-                                by assisting in the development and improvement
-                                of software solutions.
-                            </li>
-
-                            <li>
-                                <i class="fas fa-check-circle"></i>
-                                Collaborated with mentors and team members to
-                                design, test, and enhance project functionalities.
-                            </li>
-
-                            <li>
-                                <i class="fas fa-check-circle"></i>
-                                Utilized Git and GitHub for version control,
-                                project collaboration, and code management.
-                            </li>
-
-                        </ul>
-
+                        <div class="experience-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
                     </div>
 
-                </div>
+                    <p class="experience-description">
+                        Worked with mentors and team members on educational technology
+                        initiatives, contributing to software development, testing,
+                        and project improvements.
+                    </p>
 
+                    <div class="experience-points">
+                        <div>
+                            <i class="fas fa-check"></i>
+                            <span>Contributed to the development and improvement of software solutions.</span>
+                        </div>
+                        <div>
+                            <i class="fas fa-check"></i>
+                            <span>Collaborated on designing, testing, and refining project features.</span>
+                        </div>
+                        <div>
+                            <i class="fas fa-check"></i>
+                            <span>Used Git and GitHub for version control and team collaboration.</span>
+                        </div>
+                    </div>
+                </article>
             </section>
 
-
-
-            <!-- ==================== PROJECTS ==================== -->
-
+            <!-- Projects -->
             <section id="projects">
-
                 <div class="section-header">
-
                     <h2>Featured Projects</h2>
-
                     <div class="section-line"></div>
-
                 </div>
-
 
                 <div class="projects-grid">
 
-
-                    <!-- PROJECT 1 -->
-
-                    <div class="project-card">
-
+                    <article class="project-card">
                         <div class="project-header">
-
-                            <h3>
-                                Crowdsourced FAQ Discussion Platform
-                            </h3>
-
-                            <span class="project-tech">
-                                Full Stack
-                            </span>
-
+                            <div>
+                                <span class="project-number">01</span>
+                                <h3>Crowdsourced FAQ Discussion Platform</h3>
+                            </div>
+                            <span class="project-tech">Full Stack</span>
                         </div>
 
-
                         <p class="project-description">
-
-                            A full-stack discussion and FAQ platform that enables
-                            users to ask questions, share knowledge, and discover
-                            community-driven solutions.
-
+                            A community-driven platform where users can ask questions,
+                            exchange knowledge, and discover useful answers in one place.
                         </p>
 
-
                         <ul class="project-features">
-
                             <li>
                                 <i class="fas fa-check-circle"></i>
-                                Developed using React.js, Node.js,
-                                Express.js, and MongoDB.
+                                Built with React, Node.js, Express.js, and MongoDB.
                             </li>
-
                             <li>
                                 <i class="fas fa-check-circle"></i>
-                                Implemented NLP-based duplicate question
-                                detection to reduce redundant posts.
+                                Added NLP-based duplicate question detection.
                             </li>
-
                             <li>
                                 <i class="fas fa-check-circle"></i>
-                                Built secure JWT authentication and
-                                admin moderation features.
+                                Implemented JWT authentication and admin moderation.
                             </li>
-
                             <li>
                                 <i class="fas fa-check-circle"></i>
-                                Added community engagement functionalities
-                                for collaborative knowledge sharing.
+                                Designed features for community participation and discovery.
                             </li>
-
                         </ul>
 
-
-                        <a href="#" class="github-link">
-
-                            <i class="fab fa-github"></i>
-
-                            View on GitHub
-
-                            <i class="fas fa-arrow-right"></i>
-
-                        </a>
-
-                    </div>
-
-
-
-                    <!-- PROJECT 2 -->
-
-                    <div class="project-card">
-
-                        <div class="project-header">
-
-                            <h3>
-                                Automated Parking Management System
-                            </h3>
-
-                            <span class="project-tech">
-                                Java
-                            </span>
-
+                        <div class="tech-stack">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>Express</span>
+                            <span>MongoDB</span>
                         </div>
 
+                        <a href="#" class="github-link" aria-label="View FAQ platform on GitHub">
+                            <i class="fab fa-github"></i>
+                            View on GitHub
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-header">
+                            <div>
+                                <span class="project-number">02</span>
+                                <h3>Automated Parking Management System</h3>
+                            </div>
+                            <span class="project-tech">Java</span>
+                        </div>
 
                         <p class="project-description">
-
-                            A Java-based parking management system designed
-                            to efficiently manage multiple vehicles and
-                            parking slots using multithreading.
-
+                            A Java-based system for managing parking operations,
+                            vehicle registration, slot assignment, and occupancy
+                            in a concurrent environment.
                         </p>
 
-
                         <ul class="project-features">
-
                             <li>
                                 <i class="fas fa-check-circle"></i>
-                                Developed a multithreaded system for
-                                handling multiple vehicles simultaneously.
+                                Used multithreading to handle multiple vehicles simultaneously.
                             </li>
-
                             <li>
                                 <i class="fas fa-check-circle"></i>
-                                Implemented thread-safe parking slot
-                                allocation for reliable operations.
+                                Implemented thread-safe parking slot allocation.
                             </li>
-
                             <li>
                                 <i class="fas fa-check-circle"></i>
-                                Applied Object-Oriented Programming concepts
-                                including classes, inheritance, and encapsulation.
+                                Applied OOP concepts including inheritance and encapsulation.
                             </li>
-
                             <li>
                                 <i class="fas fa-check-circle"></i>
-                                Designed vehicle registration, parking slot
-                                assignment, and occupancy tracking.
+                                Added vehicle registration and occupancy tracking.
                             </li>
-
                         </ul>
 
+                        <div class="tech-stack">
+                            <span>Java</span>
+                            <span>OOP</span>
+                            <span>Multithreading</span>
+                        </div>
 
-                        <a href="#" class="github-link">
-
+                        <a href="#" class="github-link" aria-label="View parking system on GitHub">
                             <i class="fab fa-github"></i>
-
                             View on GitHub
-
                             <i class="fas fa-arrow-right"></i>
-
                         </a>
-
-                    </div>
+                    </article>
 
                 </div>
-
             </section>
 
-
-
-            <!-- ==================== CERTIFICATIONS ==================== -->
-
-            <section id="achievements">
-
+            <!-- Certifications -->
+            <section id="certifications">
                 <div class="section-header">
-
-                    <h2>Certifications & Courses</h2>
-
+                    <h2>Certifications & Learning</h2>
                     <div class="section-line"></div>
-
                 </div>
-
 
                 <div class="achievements-grid">
 
-
-                    <!-- GOOGLE -->
-
-                    <div class="achievement-card">
-
+                    <article class="achievement-card">
                         <div class="achievement-icon">
-
-                            <i class="fas fa-robot"></i>
-
-                        </div>
-
-                        <h3>
-                            Google Gen AI Study Jam
-                        </h3>
-
-                        <p>
-
-                            Completed Google's Generative AI Study Jam,
-                            gaining hands-on exposure to Large Language
-                            Models and AI applications.
-
-                        </p>
-
-                    </div>
-
-
-
-                    <!-- AWS -->
-
-                    <div class="achievement-card">
-
-                        <div class="achievement-icon">
-
                             <i class="fab fa-aws"></i>
-
                         </div>
-
-                        <h3>
-                            AWS Cloud Practitioner Essentials
-                        </h3>
-
+                        <span class="certificate-type">Cloud</span>
+                        <h3>AWS Cloud Practitioner Essentials</h3>
                         <p>
-
-                            Completed AWS Training & Certification's
-                            Cloud Practitioner Essentials course,
-                            covering AWS services, security, pricing,
-                            and cloud architecture.
-
+                            Built foundational knowledge of AWS services,
+                            cloud architecture, security, and pricing.
                         </p>
+                    </article>
 
-                    </div>
-
-
-
-                    <!-- CISCO -->
-
-                    <div class="achievement-card">
-
+                    <article class="achievement-card">
                         <div class="achievement-icon">
-
                             <i class="fas fa-network-wired"></i>
-
                         </div>
-
-                        <h3>
-                            Cisco Networking Basics
-                        </h3>
-
+                        <span class="certificate-type">Networking</span>
+                        <h3>Cisco Networking Basics</h3>
                         <p>
-
-                            Completed Cisco Networking Academy's
-                            Networking Basics course, gaining foundational
-                            knowledge of networking concepts and protocols.
-
+                            Developed foundational understanding of networking
+                            concepts, protocols, and network fundamentals.
                         </p>
+                    </article>
 
-                    </div>
+                    <article class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <span class="certificate-type">Learning</span>
+                        <h3>Google Gen AI Study Jam</h3>
+                        <p>
+                            Explored Generative AI concepts, Large Language Models,
+                            and practical AI applications.
+                        </p>
+                    </article>
 
                 </div>
-
             </section>
 
-
-
-            <!-- ==================== CONTACT ==================== -->
-
+            <!-- Contact -->
             <section id="contact">
-
                 <div class="section-header">
-
-                    <h2>Contact Me</h2>
-
+                    <h2>Let's Connect</h2>
                     <div class="section-line"></div>
-
                 </div>
 
+                <p class="contact-intro">
+                    Interested in working together, discussing a project, or simply
+                    connecting? Feel free to reach out.
+                </p>
 
                 <div class="contact-grid">
 
-
-                    <!-- EMAIL -->
-
-                    <div class="contact-item">
-
+                    <a class="contact-item" href="mailto:pmavyathareddy@gmail.com">
                         <i class="fas fa-envelope"></i>
-
-                        <a href="mailto:pmavyathareddy@gmail.com">
-                            pmavyathareddy@gmail.com
-                        </a>
-
-                    </div>
-
-
-
-                    <!-- PHONE -->
-
-                    <div class="contact-item">
-
-                        <i class="fas fa-phone-alt"></i>
-
-                        <a href="tel:+918919898561">
-                            +91 8919898561
-                        </a>
-
-                    </div>
-
-
-
-                    <!-- LINKEDIN -->
-
-                    <div class="contact-item">
-
-                        <i class="fab fa-linkedin"></i>
-
-                        <a href="https://www.linkedin.com/in/mavyatha-pyreaddy-624910363"
-                            target="_blank">
-
-                            LinkedIn
-
-                        </a>
-
-                    </div>
-
-
-
-                    <!-- GITHUB -->
-
-                    <div class="contact-item">
-
-                        <i class="fab fa-github"></i>
-
-                        <a href="https://github.com/Mavyatha"
-                            target="_blank">
-
-                            GitHub
-
-                        </a>
-
-                    </div>
-
-
-
-                    <!-- LEETCODE -->
-
-                    <div class="contact-item">
-
-                        <i class="fas fa-code"></i>
-
-                        <a href="#"
-                            target="_blank">
-
-                            LeetCode
-
-                        </a>
-
-                    </div>
-
-
-
-                    <!-- LOCATION -->
-
-                    <div class="contact-item">
-
-                        <i class="fas fa-map-marker-alt"></i>
-
                         <span>
+                            <small>Email</small>
+                            pmavyathareddy@gmail.com
+                        </span>
+                    </a>
+
+                    <a class="contact-item" href="tel:+918919898561">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>
+                            <small>Phone</small>
+                            +91 8919898561
+                        </span>
+                    </a>
+
+                    <a class="contact-item"
+                       href="https://www.linkedin.com/in/mavyatha-pyreaddy-624910363"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                        <span>
+                            <small>LinkedIn</small>
+                            Connect with me
+                        </span>
+                    </a>
+
+                    <a class="contact-item"
+                       href="https://github.com/Mavyatha"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                        <span>
+                            <small>GitHub</small>
+                            View my repositories
+                        </span>
+                    </a>
+
+                    <div class="contact-item">
+                        <i class="fas fa-location-dot"></i>
+                        <span>
+                            <small>Location</small>
                             Visakhapatnam, India
                         </span>
-
                     </div>
 
                 </div>
-
             </section>
 
-
-        </div>
-
-
-        <!-- ==================== FOOTER ==================== -->
+        </main>
 
         <footer class="footer">
-
-            <p>
-                © 2026 Mavyatha Paireddy.
-                All rights reserved.
-                | Built with passion for code
-            </p>
-
+            <p>© 2026 Mavyatha Paireddy · Built with passion for technology</p>
         </footer>
-
-
     </div>
 
-
-    <!-- ==================== SCROLL TO TOP ==================== -->
-
-    <div class="scroll-top" id="scrollTop">
-
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
         <i class="fas fa-arrow-up"></i>
-
-    </div>
-
-
-    <!-- External JavaScript -->
+    </button>
 
     <script src="script.js"></script>
-
 </body>
-
 </html>
